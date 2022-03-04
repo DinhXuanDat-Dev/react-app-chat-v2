@@ -101,7 +101,6 @@
   width: 100%;
   display: flex;
   margin: 0 18px;
-  justify-content: space-between;
 }
 
 .message-block {
@@ -125,6 +124,11 @@
   font-size: 16px;
   border-radius: 6px;
   max-width: 60%;
+}
+
+.user-message {
+  margin-right: 18px;
+  background-color: rgba(59, 42, 80, 0.55);
 }
 
 .message-image {

@@ -11,13 +11,13 @@ const App = () => {
     <ChatEngine
       height="100vh"
       projectID={projectID}
-      userName="DatDX"
-      userSecret="DatDXreactappchat"
+      userName="TestUser01"
+      userSecret="xuandat@123"
+      // userName="DatDX"
+      // userSecret="DatDXreactappchat"
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
     />
   );
 };
-
-// infinite scroll, logout, more customizations...
 
 export default App;
