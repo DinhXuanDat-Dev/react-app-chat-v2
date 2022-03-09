@@ -46,6 +46,7 @@ const LoginForm = () => {
 
     return (
         <div className="login-container">
+            <h1 className="form-title">React Chat Application</h1>
             <form onSubmit={handleSubmit} className="form-login">
                 <input 
                     type="text" 

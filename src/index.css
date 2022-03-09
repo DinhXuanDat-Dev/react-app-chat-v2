@@ -325,6 +325,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .form-input {
@@ -347,6 +348,13 @@
   width: 400px;
 }
 
+.form-title{
+  margin: 40px 0;
+  background: linear-gradient(to right, rgb(206 113 113) 0%, #330867 100%);
+	background-clip: text;
+	color: transparent;
+}
+
 .form-account{
   position: absolute;
   padding: 20px;
@@ -358,6 +366,7 @@
   position: relative;
 }
 
+
 .password-icon{
   position: absolute;
   height: 10px;
@@ -365,3 +374,4 @@
   top: 45%;
   right: 75px;
 }
+
