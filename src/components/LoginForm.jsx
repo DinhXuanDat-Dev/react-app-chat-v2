@@ -1,12 +1,22 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { EyeInvisibleFilled, EyeFilled } from "@ant-design/icons";
 
 const LoginForm = () => {
     const [ userName, setUserName ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ error, setError ] = useState('');
+    const [ togglePw, setTogglePw] = useState('password');
+    const [toggleEye , setToggleEye] = useState(false);
 
-    // const projectID = "80db972d-9f56-498d-a4df-caa52f752383"
+    const handleShowPassword = () =>{
+        setToggleEye(false);
+        setTogglePw('password');
+    }
+    const handleHidePassword = () =>{
+        setToggleEye(true);
+        setTogglePw('text');
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -45,14 +55,20 @@ const LoginForm = () => {
                     className="form-input"
                     required
                 />
-                <input 
-                    type="password" 
+                <input
+                    type={togglePw}
                     placeholder="Enter your password..."
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="form-input"    
                     required
                 />
+                <span className="password-icon">
+                    {toggleEye
+                        ? <EyeFilled onClick={handleShowPassword}/>
+                        : <EyeInvisibleFilled onClick={handleHidePassword} />
+                    }
+                </span>
                 <div className="btn-wrapper">
                     <button type="submit"className="btn-signin">
                         <span>Sign in</span>
