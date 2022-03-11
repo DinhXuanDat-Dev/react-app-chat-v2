@@ -80,7 +80,7 @@ const LoginForm = () => {
 
             <div className="form-account">
                 <h1>Account Login:</h1>
-                <div>TestUser01 / xuandat@123</div>
+                <div>TestUser01 / testuser123</div>
             </div>
         </div>
     )
